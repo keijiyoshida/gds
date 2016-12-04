@@ -7,5 +7,5 @@ type Chart struct {
 	Subtitle string
 	XAxis    string
 	YAxis    string
-	Series   []Data
+	Series   []Series
 }

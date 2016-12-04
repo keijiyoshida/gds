@@ -46,15 +46,15 @@ const tplStr = `
 							}
 						},
 					{{ end }}
-					series: [
-					{{ range $data := $chart.Series }}
-						{
-							name: '{{ $data.Name }}',
-							color: 'rgba({{ $data.Color.R }}, {{ $data.Color.G }}, {{ $data.Color.B }}, {{ $data.Color.A }})',
-							data: {{ $data.Data }}
-						},
+						series: [
+					{{ range $series := $chart.Series }}
+							{
+								name: '{{ $series.Name }}',
+								color: 'rgba({{ $series.Color.R }}, {{ $series.Color.G }}, {{ $series.Color.B }}, {{ $series.Color.A }})',
+								data: {{ $series.Data }}
+							},
 					{{ end }}
-					],
+						],
 					});
 				{{ end }}
 			});
